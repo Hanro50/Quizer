@@ -46,6 +46,13 @@ A simple Discord bot I wrote in my free time for my local High School.
  <li>I have a public test server: (<a href="https://discordapp.com/invite/B63GHsW">HTSPI</a>) </li>
  <li>I might have messed up with spelling here and there.</li>
 </ul>
-
-
+<h3> To do list </h3> 
+ <ul>
+ <li>Fix bugs</li>
+ <li>Do User Testing</li>
+ <li>Add Automark feature</li>
+ <li>Cleanup</li>
+ <li>Add comments</li>
+ <li>Put the bot Token in an external file -> Provide a precompiled version of the bot files</li>
+</ul>
 
