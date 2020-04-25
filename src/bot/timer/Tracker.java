@@ -17,7 +17,7 @@ import net.dv8tion.jda.api.JDA.Status;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.sharding.ShardManager;
-
+//State-Tracker. Mostly for the /update command. Forgot this name might seem scetchy to others
 public class Tracker {
 	public static boolean alive = true;
 	public static void shutdown(){
