@@ -136,8 +136,9 @@ public class UsrObj {
 					Obj.ActClass = "";
 					Obj.ActData = "";
 				}
-				return Obj;
+				
 			}
+			return Obj;
 		}catch (ArrayIndexOutOfBoundsException | FileNotFoundException e) {
 			//e.printStackTrace();
 			

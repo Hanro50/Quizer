@@ -25,6 +25,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		try {
+			if (token.equals("Put bot token here")) token = args[0];
 			if (args!=null && args.length > 0) {
 				for (String string : args) {
 					if (string.trim().toLowerCase().contains("nocolour")) {
@@ -70,19 +71,19 @@ public class Main {
 			
 			//PrintStream PS = System.console().writer().;
 			//Used for internal debugging
-			Runtime.getRuntime().addShutdownHook(
-					new Thread(){
-						public void run(){
-							try {
+			//Runtime.getRuntime().addShutdownHook(
+			//		new Thread(){
+			//			public void run(){
+			//				try {
 								//if (Tracker.alive) Runtime.getRuntime().exec("java -jar stop.jar "+Main.token).getOutputStream();
 								
-							} catch (IOException e) {
+			//				} catch (IOException e) {
 								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-						}
-					}
-				); 
+				//				e.printStackTrace();
+			//				}
+			//			}
+			//		}
+			//	); 
 			
 			
 			

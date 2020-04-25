@@ -38,11 +38,11 @@ public class QLoader implements Runnable {
 				+ "This is done to prevent internal errors"));
 			return;
 		}
-		String path = FileObj.ClassPath + "Downloads/";
+		String path = "Temp/";
 		FileObj.FileChk(path);
 		
 		m.message.addReaction("U+1F44D").queue();
-		Atch.downloadToFile(path + Atch.getFileName())
+		Atch.downloadToFile(FileObj.ClassPath +path + Atch.getFileName())
 			.thenAccept(file -> fileread(file))
 			.exceptionally(t ->
 				{ // handle failure
@@ -62,7 +62,7 @@ public class QLoader implements Runnable {
 			String F = FileObj.read(file, " \n ") + " \n Q<Dummy Qeustion to fix annoying bug>";
 			String Name = (m.getText().length() < 3)? (file.getName()+".l.l").split("\\.")[0] : m.getText();
 				
-			System.out.println("\n["+this.getClass().getName()+"}\n"+  F);
+			Debug.out(F);
 			//System.out.print((F.split(" \n ")[0].toLowerCase().contains("head")?F:"awaiting error:"+F.split(" \n ")[0]));
 				
 				
@@ -71,7 +71,7 @@ public class QLoader implements Runnable {
 			new Print(m," %U **Succesfully added Quizz** \""+Name.trim()+ "\" in " + timestamp() + " ms");
 			
 		} catch (IOException e) {
-			e.printStackTrace();
+			Debug.Trace(e);
 			Print.Err(m,"[Internal IO Exception] \nCould not save file" + e.getMessage());
 		}
 		catch (Exception e) {
@@ -179,6 +179,7 @@ public class QLoader implements Runnable {
 				int i = 1;
 				do {
 					Name = T + "_" + i;
+					i++;
 				}while (exists(Name));
 			}
 			

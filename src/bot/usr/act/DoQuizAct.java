@@ -29,6 +29,7 @@ public class DoQuizAct extends Activity {
 			try {
 				parent.clrAct();
 				new Print(m,"This Quiz is not retakeable");
+				return;
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				new Print(m,"Due to an unforseen error happened.\n Warning: Instability is likely");
