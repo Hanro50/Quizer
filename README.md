@@ -42,7 +42,7 @@ A simple Discord bot I wrote in my free time for my local High School.
 <p>"jda" the JDA object of the event. "sender" the user object of the user responsible for a set event.(Author of the message if it is a text message or the person who sent a reaction).The "server" property is the Guild/server the event took place in(is null if the event took place somewhere else). The "message" property is a copy of the message object from the event. Channel is the channel object from JDA the message was sent in and finally "reactemote" is the reaction emote sent by a reaction event(null when it comes to a message event).</p>
 <h3> General notes </h3> 
  <ul>
- <li>This was programed and tested on Ubuntu 20.04</li>
+ <li>This was programed and tested on <a href ="https://ubuntu.com/">Ubuntu 20.04</a></li>
  <li>I have a public test server: (<a href="https://discordapp.com/invite/B63GHsW">HTSPI</a>) </li>
  <li>I might have messed up with spelling here and there.</li>
 </ul>
