@@ -10,7 +10,7 @@ public class Debug {
 	
 
 	static public final boolean Debug = true; 
-	static public boolean Asciidebug = true;
+	static public boolean Asciidebug =true;
 	static private String Lastclass = "";
 	static private ASCII_CODES HD = ASCII_CODES.RESET;
 	
@@ -21,7 +21,9 @@ public class Debug {
 		//LoggerFactory.getLogger(Debug.class);
 	}
 	
-	
+	private static boolean getAsciidebug() {
+		return Asciidebug;
+	}
 	
 	public static void Version() {
 		out("Printing Debug Information:");
@@ -100,7 +102,7 @@ public class Debug {
 		return Caller(headerc)+bodyc+indent+ Line.trim().replaceAll("\n",ASCII_CODES.RESET+ "\n"+bodyc+indent)+ASCII_CODES.RESET;
 	}
 	
-	public enum ASCII_CODES {
+	public static enum ASCII_CODES {
 		//Normal colours|Bright versions       |Custom characters
 		RESET(0),							   Tab("    "),
 		BLACK(30)		,Bright_BLACK(30,1),
@@ -113,16 +115,18 @@ public class Debug {
 		WHITE(37)		,Bright_WHITE(37,1)
 		;
 		ASCII_CODES(String value){
-			Key = value;
+			Key2 = value;Key = value;
 		}
 		
 		
 		ASCII_CODES(int value) {
-			 if (Asciidebug) Key = "\033[" + value + "m";
+			 Key = "\033[" + value + "m";
+			 Key2 = "";
 		}
 		
 		ASCII_CODES(int value1, int value2) {
-			 if (Asciidebug) Key = "\033[" + value1+ ";" +value2+  "m";
+			 Key = "\033[" + value1+ ";" +value2+  "m";
+			 Key2 = "";
 		}
 
 		//String ANSI_RESET = "\033[0m";
@@ -134,10 +138,16 @@ public class Debug {
 		 //String ANSI_PURPLE = "\033[35m";
 		 //String ANSI_CYAN = "\u001B[36m";
 		 //String ANSI_WHITE = "\u001B[37m";
-		 
-		 
-		 String Key = "";
-		 public String toString() { return Key;};
+		  
+		 final  String Key2;
+		 final String Key;
+		 public String toString() {
+			 if (!getAsciidebug()) {
+				 return Key2;
+			 }
+			 
+			 
+			 return Key;};
 		}
 	
 }
