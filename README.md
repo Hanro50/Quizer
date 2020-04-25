@@ -1,4 +1,4 @@
-# Quizer v0.0.1-ALPHA
+# Quizer v0.0.2-ALPHA
 A simple Discord bot I wrote in my free time for my local High School. 
 
 <h3> Required Dependencies </h3> 
