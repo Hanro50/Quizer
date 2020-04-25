@@ -69,21 +69,13 @@ public class Main {
 			ticker.start(SH);
 			
 			//PrintStream PS = System.console().writer().;
+			//Used for internal debugging
 			Runtime.getRuntime().addShutdownHook(
 					new Thread(){
 						public void run(){
 							try {
-								//System.console().writer().print("Please use /stop");
-								//System.out.print("Please use /stop");
-								//System.out.flush();
-								if (Tracker.alive) Runtime.getRuntime().exec("java -jar stop.jar "+Main.token).getOutputStream();
+								//if (Tracker.alive) Runtime.getRuntime().exec("java -jar stop.jar "+Main.token).getOutputStream();
 								
-								//Scanner Log = new Scanner(Runtime.getRuntime().exec("java -jar stop.jar "+Main.token).);
-								//String A = "";
-								//while (Log.hasNext()) {
-								//	A = A + Log.nextLine() + "\n";
-								//}
-								//Debug.out(A);
 							} catch (IOException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
