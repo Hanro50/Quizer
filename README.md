@@ -1,4 +1,4 @@
-# Quizer v0.0.2-ALPHA
+# Quizer v0.0.3-ALPHA
 A simple Discord bot I wrote in my free time for my local High School. 
 
 <h3> Required Dependencies </h3> 
@@ -12,10 +12,9 @@ A simple Discord bot I wrote in my free time for my local High School.
 </ul>
 <h3> Setup </h3> 
 <ol>
- <li>Open the package bot.boot</li>
- <li>Open Main.java</li>
- <li>Change "Put bot token here" for a discord bot token (<a href = "https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token">click here for more info</a>)</i>
+ <li>Get a Discord bot token (<a href = "https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token">click here for more info</a>)</li>
  <li>Hook up the required dependencies and compile</li> 
+ <li>Pass in the bot token ass the first parameter</li>
 </ol>
 <h3> Usage </h3> 
  <p>This bot will save it's files to a subfolder within the same directory it's jar is located in that carries the same name as the Application's name the bot belongs to.</p>
@@ -53,6 +52,6 @@ A simple Discord bot I wrote in my free time for my local High School.
  <li>Add Automark feature</li>
  <li>Cleanup</li>
  <li>Add comments</li>
- <li>Put the bot Token in an external file -> Provide a precompiled version of the bot files</li>
+ <li><s>Put the bot Token in an external file</s> -> Provide a precompiled version of the bot files</li>
 </ul>
 
